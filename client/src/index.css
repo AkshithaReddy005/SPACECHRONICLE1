@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 11% 6%; /* #0B1426 space-blue */
+  --foreground: 0 0% 98%;
+  --muted: 210 15% 13%; /* #1A2332 cosmic-navy */
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 210 11% 6%;
+  --popover-foreground: 0 0% 98%;
+  --card: 210 15% 13%;
+  --card-foreground: 0 0% 98%;
+  --border: 217 91% 60%; /* #2563EB stellar-blue */
+  --input: 217 91% 60%;
+  --primary: 217 91% 60%; /* #2563EB stellar-blue */
+  --primary-foreground: 0 0% 98%;
+  --secondary: 210 15% 13%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 45 93% 47%; /* #F59E0B isro-gold */
+  --accent-foreground: 210 11% 6%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 217 91% 60%;
+  --radius: 0.5rem;
+  
+  /* Custom space theme colors */
+  --space-blue: 210 11% 6%; /* #0B1426 */
+  --cosmic-navy: 210 15% 13%; /* #1A2332 */
+  --stellar-blue: 217 91% 60%; /* #2563EB */
+  --galaxy-purple: 225 82% 67%; /* #6366F1 */
+  --isro-gold: 45 93% 47%; /* #F59E0B */
+  --mission-orange: 22 95% 45%; /* #EA580C */
+  --space-gray: 215 28% 32%; /* #374151 */
+}
+
+.dark {
+  --background: 210 11% 6%;
+  --foreground: 0 0% 98%;
+  --muted: 210 15% 13%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 210 11% 6%;
+  --popover-foreground: 0 0% 98%;
+  --card: 210 15% 13%;
+  --card-foreground: 0 0% 98%;
+  --border: 217 91% 60%;
+  --input: 217 91% 60%;
+  --primary: 217 91% 60%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 210 15% 13%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 45 93% 47%;
+  --accent-foreground: 210 11% 6%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: hsl(var(--space-blue));
+    color: hsl(var(--foreground));
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-space-blue { color: hsl(var(--space-blue)); }
+  .text-cosmic-navy { color: hsl(var(--cosmic-navy)); }
+  .text-stellar-blue { color: hsl(var(--stellar-blue)); }
+  .text-galaxy-purple { color: hsl(var(--galaxy-purple)); }
+  .text-isro-gold { color: hsl(var(--isro-gold)); }
+  .text-mission-orange { color: hsl(var(--mission-orange)); }
+  .text-space-gray { color: hsl(var(--space-gray)); }
+
+  .bg-space-blue { background-color: hsl(var(--space-blue)); }
+  .bg-cosmic-navy { background-color: hsl(var(--cosmic-navy)); }
+  .bg-stellar-blue { background-color: hsl(var(--stellar-blue)); }
+  .bg-galaxy-purple { background-color: hsl(var(--galaxy-purple)); }
+  .bg-isro-gold { background-color: hsl(var(--isro-gold)); }
+  .bg-mission-orange { background-color: hsl(var(--mission-orange)); }
+  .bg-space-gray { background-color: hsl(var(--space-gray)); }
+
+  .border-space-blue { border-color: hsl(var(--space-blue)); }
+  .border-cosmic-navy { border-color: hsl(var(--cosmic-navy)); }
+  .border-stellar-blue { border-color: hsl(var(--stellar-blue)); }
+  .border-galaxy-purple { border-color: hsl(var(--galaxy-purple)); }
+  .border-isro-gold { border-color: hsl(var(--isro-gold)); }
+  .border-mission-orange { border-color: hsl(var(--mission-orange)); }
+  .border-space-gray { border-color: hsl(var(--space-gray)); }
+
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--isro-gold)), hsl(var(--mission-orange)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gradient-blue-purple {
+    background: linear-gradient(135deg, hsl(var(--stellar-blue)), hsl(var(--galaxy-purple)));
+  }
+
+  .video-overlay {
+    background: linear-gradient(45deg, hsla(var(--space-blue), 0.8), hsla(var(--cosmic-navy), 0.6));
+  }
+
+  .timeline-line {
+    background: linear-gradient(to bottom, hsl(var(--stellar-blue)), hsl(var(--galaxy-purple)), hsl(var(--isro-gold)));
+  }
+
+  .particle {
+    position: absolute;
+    background: hsl(var(--isro-gold));
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes slideUp {
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .parallax {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  .section-transition {
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mission-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.3);
+  }
+}
