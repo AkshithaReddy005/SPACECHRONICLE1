@@ -22,17 +22,13 @@ export default function HeroSection() {
     <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-cover"
-        >
-          <source src="https://player.vimeo.com/external/291648067.hd.mp4?s=94998971682c6a3c6ba2e1d4b1b69da1c7e8306e&profile_id=175" type="video/mp4" />
-          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 video-overlay" />
+        <div
+          className="w-full h-full bg-cover bg-center"
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')"
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-space-blue/85 via-space-blue/70 to-cosmic-navy/95" />
       </div>
 
       {/* Particle Animation */}
