@@ -1,7 +1,11 @@
 import Navigation from "@/components/navigation";
 import HeroSection from "@/components/hero-section";
 import StatsSection from "@/components/stats-section";
+import InteractiveStorytelling from "@/components/interactive-storytelling";
 import TimelineSection from "@/components/timeline-section";
+import MissionTracker from "@/components/mission-tracker";
+import LaunchSimulator from "@/components/launch-simulator";
+import OrbitalVisualization from "@/components/orbital-visualization";
 import MissionsSection from "@/components/missions-section";
 import AchievementsSection from "@/components/achievements-section";
 import LeadersSection from "@/components/leaders-section";
@@ -14,7 +18,11 @@ export default function Home() {
       <Navigation />
       <HeroSection />
       <StatsSection />
+      <InteractiveStorytelling />
       <TimelineSection />
+      <MissionTracker />
+      <LaunchSimulator />
+      <OrbitalVisualization />
       <MissionsSection />
       <AchievementsSection />
       <LeadersSection />
