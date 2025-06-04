@@ -22,13 +22,18 @@ export default function HeroSection() {
     <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <div
-          className="w-full h-full bg-cover bg-center"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080')"
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-space-blue/85 via-space-blue/70 to-cosmic-navy/95" />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-full h-full object-cover opacity-70"
+        >
+          <source src="https://videos.pexels.com/video-files/4611817/4611817-hd_1920_1080_30fps.mp4" type="video/mp4" />
+          <source src="https://videos.pexels.com/video-files/2022395/2022395-uhd_2560_1440_30fps.mp4" type="video/mp4" />
+          <source src="https://videos.pexels.com/video-files/856356/856356-hd_1920_1080_30fps.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-space-blue/80 via-cosmic-navy/60 to-space-blue/90" />
       </div>
 
       {/* Particle Animation */}
