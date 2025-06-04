@@ -78,9 +78,20 @@ export default function OrbitalVisualization() {
       canvas.height = canvas.offsetHeight;
     };
 
-    const animate = () => {
-      if (!isPlaying) return;
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
 
+    return () => window.removeEventListener("resize", resizeCanvas);
+  }, []);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
       const centerX = canvas.width / 2;
@@ -153,22 +164,20 @@ export default function OrbitalVisualization() {
         }
       });
 
-      setTime(prev => prev + 1);
       if (isPlaying) {
+        setTime(prev => prev + 1);
         animationRef.current = requestAnimationFrame(animate);
       }
     };
 
-    resizeCanvas();
-    animate();
-
-    window.addEventListener("resize", resizeCanvas);
+    if (isPlaying) {
+      animationRef.current = requestAnimationFrame(animate);
+    }
 
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
-      window.removeEventListener("resize", resizeCanvas);
     };
   }, [isPlaying, selectedSatellite, time]);
 

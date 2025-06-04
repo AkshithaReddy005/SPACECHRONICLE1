@@ -6,6 +6,7 @@ import TimelineSection from "@/components/timeline-section";
 import MissionTracker from "@/components/mission-tracker";
 import LaunchSimulator from "@/components/launch-simulator";
 import OrbitalVisualization from "@/components/orbital-visualization";
+import SpaceWeatherTracker from "@/components/space-weather-tracker";
 import MissionsSection from "@/components/missions-section";
 import AchievementsSection from "@/components/achievements-section";
 import LeadersSection from "@/components/leaders-section";
@@ -23,6 +24,7 @@ export default function Home() {
       <MissionTracker />
       <LaunchSimulator />
       <OrbitalVisualization />
+      <SpaceWeatherTracker />
       <MissionsSection />
       <AchievementsSection />
       <LeadersSection />

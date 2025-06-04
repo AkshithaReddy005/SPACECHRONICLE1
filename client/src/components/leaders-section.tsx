@@ -75,6 +75,14 @@ function LeaderCard({
         {leader.description}
       </p>
       
+      <div className="space-y-2 mb-4">
+        {leader.achievements?.map((achievement, idx) => (
+          <div key={idx} className="text-xs bg-stellar-blue/20 px-2 py-1 rounded text-center">
+            {achievement}
+          </div>
+        ))}
+      </div>
+      
       <div className="text-center">
         <span className="text-xs text-gray-400">{leader.years}</span>
       </div>

@@ -71,12 +71,19 @@ function GalleryItem({
       transition={{ duration: 0.8, delay: index * 0.1 }}
       className="group cursor-pointer overflow-hidden rounded-xl border border-stellar-blue/20 hover:border-stellar-blue transition-all duration-300"
     >
-      <motion.img
-        whileHover={{ scale: 1.1 }}
-        src={image.src}
-        alt={image.alt}
-        className="w-full h-64 object-cover transition-transform duration-500"
-      />
+      <div className="relative">
+        <motion.img
+          whileHover={{ scale: 1.1 }}
+          src={image.src}
+          alt={image.alt}
+          className="w-full h-64 object-cover transition-transform duration-500"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-space-blue/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+          <h3 className="font-semibold text-white mb-1">{image.title}</h3>
+          <p className="text-isro-gold text-sm">{image.year}</p>
+        </div>
+      </div>
     </motion.div>
   );
 }
