@@ -2,11 +2,27 @@ import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { leadersData } from "@/lib/data";
 
+interface Leader {
+  name: string;
+  title: string;
+  description: string;
+  image: string;
+  alt: string;
+  achievements: string[];
+  years: string;
+}
+
+interface LeaderCardProps {
+  leader: Leader;
+  index: number;
+  isVisible: boolean;
+}
+
 export default function LeadersSection() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="leaders" ref={ref} className="py-20 bg-gradient-to-b from-cosmic-navy to-space-blue">
+    <section id="leaders" ref={ref} className="py-20">
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -14,11 +30,8 @@ export default function LeadersSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="font-inter font-bold text-4xl md:text-5xl mb-6">
-            <span className="bg-gradient-to-r from-isro-gold to-mission-orange bg-clip-text text-transparent">
-              Visionary Leaders
-            </span>
-          </h2>
+          <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-10 text-center shadow-2xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]" style={{textShadow:'0 2px 8px rgba(0,0,0,0.9), 0 0 2px #000'}}>Leaders</h2>
+<span className="block text-2xl mb-4 text-white shadow-2xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] text-center" style={{textShadow:'0 2px 8px rgba(0,0,0,0.9), 0 0 2px #000'}}>Visionary Leaders</span>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Meet the brilliant minds who shaped India's space program and inspired generations
           </p>
@@ -44,11 +57,7 @@ function LeaderCard({
   leader,
   index,
   isVisible,
-}: {
-  leader: any;
-  index: number;
-  isVisible: boolean;
-}) {
+}: LeaderCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -76,7 +85,7 @@ function LeaderCard({
       </p>
       
       <div className="space-y-2 mb-4">
-        {leader.achievements?.map((achievement, idx) => (
+        {leader.achievements?.map((achievement: string, idx) => (
           <div key={idx} className="text-xs bg-stellar-blue/20 px-2 py-1 rounded text-center">
             {achievement}
           </div>

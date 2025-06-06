@@ -215,7 +215,8 @@ export default function OrbitalVisualization() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-cosmic-navy to-space-blue">
+    <section className="py-20">
+  <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-10 text-center shadow-2xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]" style={{textShadow:'0 2px 8px rgba(0,0,0,0.9), 0 0 2px #000'}}>Orbital Visualization</h2>
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}

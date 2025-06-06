@@ -22,11 +22,8 @@ export default function AchievementsSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="font-inter font-bold text-4xl md:text-5xl mb-6">
-            <span className="bg-gradient-to-r from-galaxy-purple to-stellar-blue bg-clip-text text-transparent">
-              World Records & Achievements
-            </span>
-          </h2>
+          <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-10 text-center shadow-2xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]" style={{textShadow:'0 2px 8px rgba(0,0,0,0.9), 0 0 2px #000'}}>Achievements</h2>
+<span className="block text-2xl mb-4 text-white shadow-2xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] text-center" style={{textShadow:'0 2px 8px rgba(0,0,0,0.9), 0 0 2px #000'}}>World Records & Achievements</span>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Celebrating the remarkable milestones that put India on the global space map
           </p>

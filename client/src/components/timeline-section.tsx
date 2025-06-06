@@ -14,9 +14,15 @@ const iconMap = {
 
 export default function TimelineSection() {
   const { ref, isVisible } = useScrollAnimation();
-
   return (
-    <section id="timeline" ref={ref} className="py-20 bg-space-blue relative">
+    <section id="timeline" ref={ref} className="relative py-20">
+  {/* Top fade for seamless transition from hero */}
+  <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-space-blue/95 to-transparent pointer-events-none z-10" />
+      {/* Light cosmic/starfield background */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+  {/* Blurry, semi-transparent overlay for premium effect */}
+  <div className="absolute inset-0 bg-white/5 backdrop-blur-sm" />
+</div>
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -24,14 +30,8 @@ export default function TimelineSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="font-inter font-bold text-4xl md:text-5xl mb-6">
-            <span className="bg-gradient-to-r from-stellar-blue to-galaxy-purple bg-clip-text text-transparent">
-              Timeline of Triumph
-            </span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Journey through the decades of ISRO's groundbreaking achievements and milestones
-          </p>
+          <h2 className="font-inter font-bold text-4xl md:text-5xl mb-6 text-white shadow-2xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] text-center" style={{textShadow:'0 2px 8px rgba(0,0,0,0.9), 0 0 2px #000'}}>Timeline of Triumph</h2>
+<p className="text-xl text-white max-w-3xl mx-auto shadow-2xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] text-center" style={{textShadow:'0 2px 8px rgba(0,0,0,0.9), 0 0 2px #000'}}>Journey through the decades of ISRO's groundbreaking achievements and milestones</p>
         </motion.div>
 
         {/* Timeline Container */}

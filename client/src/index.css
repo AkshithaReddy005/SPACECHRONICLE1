@@ -105,6 +105,13 @@
     -webkit-text-fill-color: transparent;
   }
 
+  .hero-gradient-text {
+    background: linear-gradient(135deg, #00FFFF, #8A2BE2); /* Cyan to BlueViolet */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   .gradient-blue-purple {
     background: linear-gradient(135deg, hsl(var(--stellar-blue)), hsl(var(--galaxy-purple)));
   }

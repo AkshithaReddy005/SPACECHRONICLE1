@@ -7,7 +7,7 @@ export default function MissionsSection() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="missions" ref={ref} className="py-20 bg-gradient-to-b from-cosmic-navy to-space-blue">
+    <section id="missions" ref={ref} className="py-20">
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -15,11 +15,8 @@ export default function MissionsSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="font-inter font-bold text-4xl md:text-5xl mb-6">
-            <span className="bg-gradient-to-r from-isro-gold to-mission-orange bg-clip-text text-transparent">
-              Landmark Missions
-            </span>
-          </h2>
+          <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-10 text-center shadow-2xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]" style={{textShadow:'0 2px 8px rgba(0,0,0,0.9), 0 0 2px #000'}}>Missions</h2>
+<span className="block text-2xl mb-4 text-white shadow-2xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] text-center" style={{textShadow:'0 2px 8px rgba(0,0,0,0.9), 0 0 2px #000'}}>Landmark Missions</span>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Explore the groundbreaking missions that defined India's space exploration journey
           </p>

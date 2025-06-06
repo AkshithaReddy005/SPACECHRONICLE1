@@ -110,7 +110,9 @@ export default function InteractiveStorytelling() {
   const chapter = storyChapters[currentChapter];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-space-blue to-cosmic-navy relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden min-h-screen flex items-center justify-center">
+  {/* Starfield background */}
+  
       {/* Background particles */}
       <div className="absolute inset-0 opacity-30">
         {Array.from({ length: 20 }).map((_, i) => (
@@ -141,11 +143,9 @@ export default function InteractiveStorytelling() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="font-inter font-bold text-4xl md:text-5xl mb-6">
-            <span className="bg-gradient-to-r from-galaxy-purple to-stellar-blue bg-clip-text text-transparent">
-              The ISRO Chronicles
-            </span>
-          </h2>
+          <h2 className="font-inter font-bold text-4xl md:text-5xl mb-6 text-white shadow-2xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]" style={{textShadow:'0 2px 8px rgba(0,0,0,0.9), 0 0 2px #000'}}>
+  The ISRO Chronicles
+</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             An immersive journey through India's greatest space achievements
           </p>
@@ -253,7 +253,11 @@ export default function InteractiveStorytelling() {
           </div>
 
           {/* Visual Content */}
-          <div className="space-y-6">
+          <div className="space-y-6 relative">
+            {/* Cosmic animated glow overlay for this section */}
+            <div className="absolute -inset-8 z-0 pointer-events-none">
+              <div className="w-full h-full animate-gradient-move bg-gradient-to-br from-indigo-900/60 via-fuchsia-800/40 to-blue-900/70 blur-2xl opacity-70 rounded-2xl"></div>
+            </div>
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentChapter}
@@ -261,34 +265,33 @@ export default function InteractiveStorytelling() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.5 }}
-                className="relative"
+                className="relative z-10"
               >
-                <div className="relative overflow-hidden rounded-xl border border-stellar-blue/20">
+                <div className="relative overflow-hidden rounded-xl border border-stellar-blue/20 shadow-xl">
                   <img
                     src={chapter.image}
                     alt={chapter.title}
                     className="w-full h-80 object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-space-blue/60 to-transparent" />
-                  
                   {/* Floating elements */}
                   <motion.div
                     animate={{ y: [-10, 10, -10] }}
                     transition={{ duration: 4, repeat: Infinity }}
-                    className="absolute top-4 right-4 bg-isro-gold/20 backdrop-blur-md px-3 py-1 rounded-full"
+                    className="absolute top-4 right-4 bg-isro-gold/20 backdrop-blur-md px-3 py-1 rounded-full shadow-lg"
                   >
                     <span className="text-isro-gold font-semibold text-sm">{chapter.year}</span>
                   </motion.div>
                 </div>
-
                 {/* 3D Effect Border */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-stellar-blue via-galaxy-purple to-isro-gold rounded-xl opacity-30 blur-sm -z-10" />
+                <div className="absolute -inset-1 bg-gradient-to-r from-stellar-blue via-galaxy-purple to-isro-gold rounded-xl opacity-30 blur-md -z-10" />
               </motion.div>
             </AnimatePresence>
 
-            {/* Mini Timeline */}
-            <div className="bg-cosmic-navy p-4 rounded-lg">
-              <h4 className="font-semibold mb-3 text-center">Story Timeline</h4>
+            {/* Mini Timeline with cosmic background */}
+            <div className="relative z-10 bg-cosmic-navy/90 p-4 rounded-lg shadow-xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/40 via-fuchsia-800/30 to-blue-900/40 opacity-60 blur-md -z-10"></div>
+              <h4 className="font-semibold mb-3 text-center text-isro-gold drop-shadow">Story Timeline</h4>
               <div className="flex justify-between items-center text-xs">
                 {storyChapters.map((chap, index) => (
                   <div
@@ -298,9 +301,7 @@ export default function InteractiveStorytelling() {
                     }`}
                     onClick={() => setCurrentChapter(index)}
                   >
-                    <div className={`w-2 h-2 rounded-full mb-1 ${
-                      index === currentChapter ? "bg-isro-gold" : "bg-gray-600"
-                    }`} />
+                    <span className="w-2 h-2 rounded-full mb-1 block bg-gradient-to-tr from-isro-gold via-stellar-blue to-galaxy-purple shadow-lg" />
                     <span>{chap.year}</span>
                   </div>
                 ))}

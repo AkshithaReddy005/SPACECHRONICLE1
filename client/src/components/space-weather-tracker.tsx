@@ -115,11 +115,9 @@ export default function SpaceWeatherTracker() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="font-inter font-bold text-4xl md:text-5xl mb-6">
-            <span className="bg-gradient-to-r from-mission-orange to-galaxy-purple bg-clip-text text-transparent">
-              Space Weather Monitor
-            </span>
-          </h2>
+          <h2 className="font-inter font-bold text-4xl md:text-5xl mb-6 text-white shadow-2xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]" style={{textShadow:'0 2px 8px rgba(0,0,0,0.9), 0 0 2px #000'}}>
+  Space Weather Monitor
+</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Real-time monitoring of space weather conditions affecting ISRO satellites
           </p>

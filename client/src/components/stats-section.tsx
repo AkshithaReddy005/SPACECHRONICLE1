@@ -15,6 +15,7 @@ export default function StatsSection() {
   return (
     <section ref={ref} className="py-20 bg-cosmic-navy">
       <div className="max-w-7xl mx-auto px-4">
+  <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-10 text-center shadow-2xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]" style={{textShadow:'0 2px 8px rgba(0,0,0,0.9), 0 0 2px #000'}}>India in Numbers</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <StatCard
