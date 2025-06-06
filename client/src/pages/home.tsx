@@ -20,7 +20,7 @@ export default function Home() {
       <div className="fixed inset-0 z-0 pointer-events-none">
   <video
     className="w-full h-full object-cover fixed inset-0 z-0"
-    src="https://cdn.pixabay.com/video/2022/10/12/134471-759723611_tiny.mp4" // Changed to a different cosmic video
+    src="https://cdn.pixabay.com/video/2024/05/13/211791_tiny.mp4"
     autoPlay
     loop
     muted
