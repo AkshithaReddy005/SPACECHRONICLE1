@@ -22,7 +22,7 @@ const storyChapters: StoryChapter[] = [
     title: "Humble Beginnings",
     subtitle: "From Bicycle to Rockets",
     content: "In 1963, Dr. Vikram Sarabhai and Dr. Kalam transported rocket parts on bicycles through the narrow streets of Thumba village. This small fishing village in Kerala would become the birthplace of India's space dreams.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Thumba_Equatorial_Rocket_Launching_Station.jpg/600px-Thumba_Equatorial_Rocket_Launching_Station.jpg",
+    image: "https://preview.redd.it/parts-of-the-first-rocket-launched-by-india-were-v0-e0ty18mezhv91.jpg?auto=webp&s=2e895a55d020e1960a5411f9d935d7a2aa1d3649",
     year: "1963",
     keyFact: "First rocket launched from a church in Thumba village"
   },
@@ -31,7 +31,7 @@ const storyChapters: StoryChapter[] = [
     title: "Breaking the Sky Barrier",
     subtitle: "Aryabhatta's Historic Journey",
     content: "Named after the ancient Indian mathematician, Aryabhatta became India's first satellite in 1975. Though communication was lost after 5 days, it marked India's entry into the space age and inspired a generation of scientists.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Aryabhatta_satellite.jpg/400px-Aryabhatta_satellite.jpg",
+    image: "https://i.redd.it/rf16krwsjst41.png",
     year: "1975",
     keyFact: "India's first satellite weighed 360 kg"
   },
@@ -40,7 +40,7 @@ const storyChapters: StoryChapter[] = [
     title: "The Red Planet Calling",
     subtitle: "Mangalyaan's Impossible Dream",
     content: "In 2014, India achieved what many thought impossible - reaching Mars in the first attempt at just $74 million. The Mars Orbiter Mission proved that frugal engineering and innovative thinking could conquer interplanetary space.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/PSLV-C25_successful_launch.jpg/500px-PSLV-C25_successful_launch.jpg",
+    image: "https://apnaran.com/wp-content/uploads/2023/04/MANGALYAAN.jpg",
     year: "2014",
     keyFact: "Cost less than a Hollywood movie budget"
   },
@@ -49,7 +49,7 @@ const storyChapters: StoryChapter[] = [
     title: "Conquering the Unknown",
     subtitle: "Chandrayaan-3's Historic Landing",
     content: "August 23, 2023 - A day that made India the fourth country to land on the Moon and the first to touch the lunar south pole. The Vikram lander and Pragyan rover opened new chapters in space exploration.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Chandrayaan-3_Mission_logo.png/400px-Chandrayaan-3_Mission_logo.png",
+    image: "https://tse3.mm.bing.net/th?id=OIP.sa8JFVbV1twZ2JPfgRlMtQHaEo&pid=Api&P=0&h=180",
     year: "2023",
     keyFact: "First successful landing near Moon's south pole"
   },
@@ -58,7 +58,7 @@ const storyChapters: StoryChapter[] = [
     title: "Journey to the Stars",
     subtitle: "The Future Beckons",
     content: "With Gaganyaan preparing to carry Indian astronauts to space and Aditya-L1 studying our Sun, ISRO continues to push boundaries. The next frontier: Venus, Jupiter, and beyond the solar system.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Sriharikota_Range_%28SHAR%29.jpg/500px-Sriharikota_Range_%28SHAR%29.jpg",
+    image: "https://tse4.mm.bing.net/th?id=OIP.r63X1INKSyRiXMkniN085AHaEK&pid=Api&P=0&h=180",
     year: "2025+",
     keyFact: "Human spaceflight mission Gaganyaan scheduled"
   }
