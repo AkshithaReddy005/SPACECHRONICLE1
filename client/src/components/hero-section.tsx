@@ -65,7 +65,6 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <video
           ref={videoRef}
-          key={videoSources[currentVideoIndex]} // Key to ensure React re-renders the video element
           muted // autoPlay is often blocked if not muted
           playsInline
           // onEnded is removed as timer controls duration
