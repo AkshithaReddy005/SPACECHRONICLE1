@@ -25,7 +25,10 @@ export async function setupVite(app: Express, server: Server) {
     allowedHosts: true,
   };
 
+  const clientRoot = path.resolve(import.meta.dirname, "..", "client");
+
   const vite = await createViteServer({
+    root: clientRoot,
     customLogger: {
       ...viteLogger,
       error: (msg, options) => {
@@ -42,12 +45,7 @@ export async function setupVite(app: Express, server: Server) {
     const url = req.originalUrl;
 
     try {
-      const clientTemplate = path.resolve(
-        import.meta.dirname,
-        "..",
-        "client",
-        "index.html",
-      );
+      const clientTemplate = path.resolve(clientRoot, "index.html");
 
       // always reload the index.html file from disk incase it changes
       let template = await fs.promises.readFile(clientTemplate, "utf-8");
