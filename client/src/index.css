@@ -152,6 +152,12 @@
     50% { opacity: 0.5; }
   }
 
+  @keyframes gradient-move {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
   .animate-slide-up {
     animation: slideUp 0.8s ease-out;
   }
@@ -162,6 +168,11 @@
 
   .animate-pulse-slow {
     animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-gradient-move {
+    background-size: 200% 200%;
+    animation: gradient-move 3s ease infinite;
   }
 
   .parallax {

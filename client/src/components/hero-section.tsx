@@ -65,15 +65,17 @@ export default function HeroSection() {
       <div className="absolute inset-0 z-0">
         <video
           ref={videoRef}
-          muted // autoPlay is often blocked if not muted
+          muted
+          autoPlay
           playsInline
-          // onEnded is removed as timer controls duration
-          className="w-full h-full object-cover opacity-60" // Slightly reduced video opacity
-          src={videoSources[currentVideoIndex]} // Set the source dynamically
+          className="w-full h-full object-cover opacity-60"
+          src={videoSources[currentVideoIndex]}
         >
           Your browser does not support the video tag.
         </video>
         
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-space-blue/80 via-cosmic-navy/60 to-space-blue/90" />
       </div>
 
       {/* Hero Content */}
@@ -120,7 +122,7 @@ export default function HeroSection() {
             className="border-2 border-isro-gold text-isro-gold bg-transparent px-8 py-4 rounded-lg font-semibold hover:bg-isro-gold hover:text-space-blue transition-all duration-300"
           >
             <FlagTriangleRight className="mr-2 h-4 w-4" />
-            Explore FlagTriangleRight
+            Explore Timeline
           </Button>
         </motion.div>
       </div>
